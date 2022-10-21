@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog personal</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/media-query.css">
+</head>
+
+<body class=>
+  <div id="header"></div>
+
+  <main class="blogs-main">
+    <section class="news">
+      <div class="news-content">
+        <!-- <h3>PQRs</h3> -->
+        <img src="img/post-3.png" alt="img de blog">
+        <div class="news-info">
+          <h2>Su opinión es importante para nosotros</h2>
+          <form action="" method="post" class="main-form">
+            <label for="name">Nombre: </label>
+            <span style="color: red; display: none" id="errorn">Ingresar un nombre</span>
+            <input type="text" id="name" name="nombre">
+            <label for="email">Email: </label>
+            <span style="color: red; display: none" id="errore">Ingresar un correo</span>
+            <input type="email" id="email" name="email">
+            <label for="name">Asunto: </label>
+            <span style="color: red; display: none" id="errora">Selecciona un tipo de asunto</span>
+            <select name="select" class="form-control form-select" id="tipoa">
+              <option value="">Tipo de asunto</option>
+              <option value="Peticion">Petición</option>
+              <option value="Queja">Queja</option>
+              <option value="Reclamo">Reclamo</option>
+            </select>
+            <label for="msg">Mensaje:</label>
+            <span style="color: red; display: none" id="errorm">Describe tu PQRs</span>
+            <textarea class="text-area" name="mensaje" id="msg" cols="30" rows="10"></textarea>
+          </form>
+          <a class="blogs-btn" href="#" onclick="validar()">Enviar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="footer"></div>
+
+  <!-- llamo a conexion -->
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+  <script src="js/conexion.js"></script>
+
+
+  <!-- SCRIPTS -->
+  <script src="partes/cebecera.js"></script>
+  <script src="js/pqrs.js"></script>
+  <script src="partes/footer.js"></script>
+</body>
+
+</html>

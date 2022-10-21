@@ -1,0 +1,414 @@
+/*Roboto Slaf 400, 700
+  Roboto 400 500 700 900
+  Roboto Mono 400 500 700
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 400;
+}
+
+.home-body {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+/*     HEADER      */
+.header {
+  width: 100%;
+  height: 140px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.social {
+  background-color: #2b6ae6;
+  width: 100%;
+  height: 50px;
+  display: grid;
+}
+
+.social-icons {
+  width: 150px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: end;
+  margin-right: 50px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 28px;
+}
+
+.social-icons a:hover {
+  color: #616161;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90px;
+  /* border-bottom: 1px solid #616161; */
+}
+
+.nav-logo {
+  /* width: 220px; */
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  width: 215px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #000;
+  margin: 0 15px;
+}
+
+.nav-link a:hover {
+  color: #2b6ae6;
+  border-bottom: 1px solid #2b6ae6;
+}
+
+/*      MAIN DEL HOME      */
+.home-main {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  height: 100%;
+  background: rgb(66, 65, 65) url("../img/background.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.main-container {
+  display: grid;
+  grid-column: 2;
+  justify-items: center;
+  height: 350px;
+  margin-top: 90px;
+}
+
+.main-container__text {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: #fff;
+}
+
+.main-container__link {
+  background-color: #2b6ae6;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  height: 45px;
+}
+
+.main-container__link:hover {
+  background-color: #616161;
+}
+
+/* PAGINA DE BLOGS */
+
+.blogs-main {
+  display: grid;
+}
+
+.news {
+  background-color: #e6e9ed;
+  padding: 10px 80px 40px;
+}
+
+.news-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.news-content img {
+  grid-column: 1;
+  width: 90%;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.news-info {
+  grid-column: 2;
+  width: 500px;
+}
+
+.text-area {
+  resize: none;
+}
+
+.news-info h2 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.news-info form {
+  margin: 30px 10px 30px 0;
+  padding: 20px;
+  display: grid;
+  border: 1px solid #0845c1;
+  border-radius: 5px;
+}
+
+.news-info input,
+label {
+  margin: 5px 0;
+}
+
+.news-info option,
+label {
+  margin: 5px 0;
+}
+
+.news-info textarea,
+label {
+  margin: 5px 0;
+}
+
+/*      BOTON DE BLOGS      */
+.blogs-btn {
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #0c59f2;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+/*      FOOTER      */
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: #413f3f;
+  border-top: 35px solid #2b6ae6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+}
+
+footer b {
+  font-size: 27px;
+}
+
+/*      BLOG      */
+
+.main-blog {
+  padding: 0 80px 40px;
+}
+
+.main-blog__content {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+}
+
+.main-blog__content img {
+  display: inline-block;
+  padding: 15px 50px 0 40px;
+  width: 550px;
+}
+
+.blog-content__article {
+  padding: 0 80px 40px;
+}
+
+.blog-content__article h4 {
+  border-bottom: 1px solid #cdd2da;
+  padding: 20px 0;
+}
+
+.blog-content__article h1 {
+  margin: 20px 0;
+  font-size: 35px;
+}
+
+/*     SECCION DE CONTACTO      */
+
+.section-contact {
+  width: 100%;
+  background-color: #e6e9ed;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px 50px;
+}
+
+.contact {
+  display: flex;
+  margin: 20px 0 20px 20px;
+}
+
+.contact img {
+  width: 100px;
+  display: inline-block;
+  padding: 10px;
+}
+
+.contact-info {
+  padding: 20px 0;
+  width: 200px;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+
+.contact-info p {
+  margin-top: 10px;
+}
+
+/* MODAL */
+input {
+  margin: 5px;
+}
+
+.modal-container {
+  opacity: 0;
+  visibility: hidden;
+  color: #2b6ae6;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgb(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 40%;
+  height: 60%;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  transition: transform 1s;
+  transform: translateY(0%);
+  overflow: hidden;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: #c44a4a;
+  color: #fff;
+  line-height: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.modal-close {
+  transform: translateY(-200%);
+}
+
+.modal img {
+  height: 45%;
+}
+
+.contentFormContection {
+  width: 300px;
+  height: 20%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: static;
+}
+
+.text {
+  width: 300px;
+  padding-left: 10px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.151);
+  margin-bottom: 15px;
+  outline: none;
+  color: #000;
+}
+
+.boton {
+  width: 100px;
+  padding: 10px;
+  background: #2b6ae6;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+}
+
+.boton:hover {
+  background: #616161;
+  transition: all 0.5s ease;
+}
+
+/* Boton WhatsApp */
+.btnconta a {
+  font-size: 60px;
+  text-decoration: none;
+  color: #0c59f2;
+}
+
+.btnconta {
+  margin-top: 450px;
+  margin-left: 140px;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.main-container__link {
+  border-radius: 5px;
+}

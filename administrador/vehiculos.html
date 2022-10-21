@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>TRANSPORTADORA</title>
+
+  <!--   <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/"> -->
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap/bootstrap.min.css" type="text/css" rel="stylesheet">
+
+  <link href="../css/estilo.css" type="text/css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
+
+  <!-- Custom styles for this template -->
+  <link href="../css/dashboard.css" type="text/css" rel="stylesheet">
+
+  <!-- llamo a conexion -->
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+  <script src="../js/conexion.js"></script>
+
+</head>
+
+<body>
+  <!-- llamado a cabecera -->
+  <div id="header"> </div>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- llamado al menu -->
+      <div id="nav"></div>
+
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Registro de vehiculos</h1>
+          <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group me-2">
+              <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+            </div>
+          </div>
+        </div>
+        <!-- colocar contenidos -->
+        <br>
+        <button id="visualizar" class="btn btn-primary" onclick="mostrar('ver');">Insertar Nuevo registro de
+          vehiculo</button>
+        <br>
+        <div id="form" style="display: none;">
+          <div class="row">
+            <div class="col-lg-4">
+              <input type="hidden" id="vid">
+              <input type="text" class="form-control" id="modelo" placeholder="modelo">
+              <span style="color: red; display: none" id="errorm">Ingresar un modelo</span>
+            </div>
+            <div class="col-lg-4">
+              <input type="text" class="form-control" id="año" placeholder="año ">
+              <span style="color: red; display: none" id="errora">Ingresar un año</span>
+            </div>
+            <div class="col-lg-4">
+              <input type="text" class="form-control" id="placa" placeholder="placa">
+              <span style="color: red; display: none" id="errorp">Ingresar una placa</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <input type="text" class="form-control" id="estado" placeholder="estado">
+              <span style="color: red; display: none" id="errore">Ingresar un estado</span>
+            </div>
+            <div class="col-lg-3">
+              <span style="color: red; display: none" id="erroro">Ingresar una breve observacion</span>
+              <textarea name="observacion" class="form-control" id="observacion" placeholder="observacion" cols="10"
+                rows="2"></textarea>
+              <!-- <input type="text" class="form-control" id="cliente" placeholder="Cliente"> -->
+            </div>
+
+            <!--<div class="col-lg-4">
+              <input type="text" class="form-control" id="obsevacion" placeholder="obsevacion">
+              <span style="color: red; display: none" id="erroro">Ingresar una obsevacion</span>
+            </div>>-->
+
+            <div class="col-lg-4"></div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+              <button id="botong" class="btn btn-primary" onclick="validar();">Guardar</button>
+              <button id="botone" class="btn btn-primary" onclick="editar();" style="display: none;">Editar</button>
+            </div>
+            <div class="col-lg-4">
+              <button id="ocultar" class="btn btn-secondary" onclick="mostrar('ocultar');">Cancelar</button>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <div id="consulta">
+          <div class="table-responsive">
+            <table class="table table-dark table-striped ">
+              <tr>
+                <th>modelo</th>
+                <th>año</th>
+                <th>placa</th>
+                <th>estado</th>
+                <th>observacion</th>
+                <th>Acciones</th>
+              </tr>
+              <tbody id="convehiculo">
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- fin contenidos -->
+      </main>
+    </div>
+  </div>
+  <script src="../js/bloqueo.js"></script>
+  <script src="../partes/header.js"></script>
+  <script src="../partes/nav.js"></script>
+  <script src="../js/vehiculos.js"></script>
+  <script src="../js/logout.js"></script>
+
+  <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+    integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+    crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script> -->
+  <!-- <script src="js/dashboard.js"></script> -->
+</body>
+
+</html>

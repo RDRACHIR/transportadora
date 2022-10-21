@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRANSPORTADORA</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/all.min.css">
+
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/5a2c53d93e.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="home-body">
+  <!--Cabecera -->
+  <header class="header">
+    <div class="social">
+      <div class="social-icons">
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="img/logo.svg" alt="Logo de pagina">
+        </a>
+      </div>
+      <div class="nav-link">
+        <a href="index.html">Inicio</a>
+        <a id="abrir" href="#l">Acceso agentes</a>
+        <a href="aboutus.html">Sobre nosotros</a>
+        <a href="pqrs.html">PQRs</a>
+      </div>
+    </nav>
+  </header>
+  <!-- Principal -->
+  <main class="home-main">
+    <div class="main-container">
+      <h2 class="main-container__text">Mundo de soluciones</h2>
+      <p class="main-container__text">Transporte, entrega y logística física o digital para ti o tu empresa a tiempo.
+      </p>
+      <a class="main-container__link" href="https://api.whatsapp.com/send?phone=57#" target="_blank"><i
+          class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </main>
+
+
+
+  <!-- Modal -->
+  <section>
+    <div class="modal-container">
+      <div class="modal modal-close">
+        <p class="close">X</p>
+        <img src="img/login.svg" alt="">
+        <h2>Iniciar sesión</h2>
+        <form class="contentFormContection">
+          <input type="text" class="text" id="email" placeholder="Email" required>
+          <input type="password" class="text" id="clave" placeholder="Contraseña" required>
+          <input type="submit" id="login" class="boton" placeholder="Email" value="Iniciar sesión">
+        </form>
+      </div>
+  </section>
+
+  <!-- Llamada conexion Firebase -->
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+  <!-- SCRIPTS -->
+  <script src="js/conexion.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/login.js"></script>
+
+</body>
+
+</html>
